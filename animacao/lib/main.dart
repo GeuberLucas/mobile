@@ -33,8 +33,6 @@ class _MyHomePageState extends State<MyHomePage> {
   var x = 50.0;
   var y = 50.0;
 
-  late Ticker _ticker;
-
   @override
   void initState() {
     super.initState();
@@ -48,19 +46,21 @@ class _MyHomePageState extends State<MyHomePage> {
   void dispose() {
     // TODO: implement dispose
     super.dispose();
-    _ticker.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     x += 1;
+    print("teste");
     return Scaffold(
-      body: Transform.translate(
-        offset: Offset(x, y),
-        child: Container(
-          width: size,
-          height: size,
-          color: Colors.red,
+      body: Center(
+        child: Transform.translate(
+          offset: Offset(x, y),
+          child: Container(
+            width: size,
+            height: size,
+            color: Colors.red,
+          ),
         ),
       ),
     );
