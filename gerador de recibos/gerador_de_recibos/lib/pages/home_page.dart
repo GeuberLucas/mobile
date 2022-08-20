@@ -1,6 +1,5 @@
-// ignore_for_file: non_constant_identifier_names
-
 import 'package:flutter/material.dart';
+import 'package:gerador_de_recibos/functions_dynamics/number_text.dart';
 
 import '../Models/itens_models.dart';
 
@@ -16,6 +15,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController nameClienteController = TextEditingController();
   final TextEditingController amountController = TextEditingController();
   final TextEditingController amountInTextController = TextEditingController();
+  var a = NumberText();
   List<ItensModel>? itens;
   ItensModel item = ItensModel();
   DateTime? date;
@@ -41,11 +41,19 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Padding(
               padding: const EdgeInsets.all(5.0),
-              child: TextField(
-                decoration: const InputDecoration(
-                  labelText: 'Valor Total',
+              child: Focus(
+                onFocusChange: (hasFocus) {
+                  if (!hasFocus) {
+                    amountInTextController.text =
+                        a.TransformNumberInText(amountController.text);
+                  }
+                },
+                child: TextField(
+                  decoration: const InputDecoration(
+                    labelText: 'Valor Total',
+                  ),
+                  controller: amountController,
                 ),
-                controller: amountController,
               ),
             ),
             Padding(
@@ -57,10 +65,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 controller: amountInTextController,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child:
-            )
+            // Padding(
+            //   padding: const EdgeInsets.all(5.0),
+            //   child:
+            // )
           ],
         ),
       ),
