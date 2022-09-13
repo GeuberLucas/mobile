@@ -1,16 +1,10 @@
 # gerador_de_recibos
 
-A new Flutter project.
+Gerador de recibos em PDF
 
-## Getting Started
+## ABOUT
 
-This project is a starting point for a Flutter application.
+Esse projeto é uma demanda de familiares que tomei a frente para produzir uma ferramenta de auxilio para diminuir o tempo de geração de recibos de uma empresa da familia.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Modelo ideia](https://user-images.githubusercontent.com/72151324/190012870-b00993ff-f51f-4224-899a-8844f2782301.png)
